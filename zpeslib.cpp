@@ -76,6 +76,14 @@ void* ZPESFILE::GetBuffer()
     return src;
 }
 
+uLong ZPESFILE::GetBufferSize()
+{
+    if (srcLen == 0)
+        return st.st_size;
+
+    return srcLen;
+}
+
 bool ZPESFILE::Write(const char* outputFile, ZFLAG flag)
 {
     // Check if file was readed

@@ -29,6 +29,7 @@ public:
     bool Uncompress();
     bool Compress();
     void* GetBuffer();
+    uLong GetBufferSize();
     bool Write(const char* outputFile, ZFLAG flag);
     ~ZPESFILE();
 };
